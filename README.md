@@ -50,7 +50,7 @@ The **Linear Regression** model performed better and was chosen as the **baselin
 ### **Part B: Ensemble Techniques for Bias and Variance Reduction**
 
 #### **1. Bagging (Variance Reduction)**  
-- Implemented **Bagging Regressor** using a **Decision Tree Regressor (max_depth=6)** as the base estimator with **50 trees**.  
+- Implemented **Bagging Regressor** using a **Decision Tree Regressor (max_depth=6)** as the base estimator with **100 trees**.  
 - Bagging reduces **variance** by averaging multiple independent high-variance models trained on different data subsets.
 
 | Model | RMSE |
@@ -64,14 +64,14 @@ Although RMSE is slightly higher than Linear Regression, it should be compared w
 
 #### **2. Boosting (Bias Reduction)**  
 - Implemented **Gradient Boosting Regressor** with:
-  - 200 estimators,
-  - learning_rate = 0.1,
-  - max_depth = 4.
+  - 300 estimators,
+  - learning_rate = 0.2,
+  - max_depth = 6.
 - Boosting sequentially learns from previous model errors, reducing **bias**.
 
 | Model | RMSE |
 |--------|------|
-| **Gradient Boosting** | **56.16** |
+| **Gradient Boosting** | **48.15** |
 
 Boosting drastically improved performance, demonstrating strong bias correction and better generalization.
 
@@ -93,7 +93,7 @@ The meta-learner receives the base models’ predictions as inputs and **learns 
 
 | Model | RMSE |
 |--------|------|
-| **Stacking Regressor** | **54.56** |
+| **Stacking Regressor** | **47.77** |
 
 Stacking achieved the **lowest RMSE**, confirming that combining diverse learners balances bias and variance effectively.
 
@@ -109,8 +109,8 @@ Stacking achieved the **lowest RMSE**, confirming that combining diverse learner
 |--------|------:|---------|
 | Linear Regression (Baseline) | 100.45 | High bias, low variance |
 | Bagging (DT Base) | 112.34 | Reduced variance vs single tree |
-| Gradient Boosting | 56.16 | Strong bias reduction |
-| **Stacking Regressor** | **54.56** | **Best overall model** |
+| Gradient Boosting | 48.15 | Strong bias reduction |
+| **Stacking Regressor** | **47.77** | **Best overall model** |
 
 ---
 
@@ -124,7 +124,7 @@ Stacking achieved the **lowest RMSE**, confirming that combining diverse learner
 
 ## **Conclusion**
 
-- The **Stacking Regressor** outperformed all other models, achieving the **lowest RMSE (54.56)**.  
+- The **Stacking Regressor** outperformed all other models, achieving the **lowest RMSE (47.77)**.  
 - **Bagging** reduced variance effectively compared to a single tree.  
 - **Gradient Boosting** provided strong bias reduction.  
 - **Stacking** leveraged model diversity, combining the strengths of each ensemble for superior generalization.
