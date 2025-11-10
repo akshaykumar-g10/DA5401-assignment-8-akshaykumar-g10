@@ -102,7 +102,8 @@ Stacking achieved the **lowest RMSE**, confirming that combining diverse learner
 ### **Part D: Final Analysis**
 
 #### **Comparative Performance**
-<img width="695" height="471" alt="image" src="https://github.com/user-attachments/assets/2f51a70e-2a3d-4d0e-9f70-669c7584d8d6" />
+<img width="695" height="471" alt="image" src="https://github.com/user-attachments/assets/8238765b-df18-4770-bf98-d40df9895007" />
+
 
 
 | Model | RMSE | Remarks |
